@@ -16,4 +16,4 @@ Putanameto is a simple and clean todo list app built with Vue.js. You can add, e
 Built with Vue.js, Firebase, and Tailwind CSS.
 
 Source: https://github.com/pappater/putanameto
-Live: https://putanameto.surge.sh/
+Live: https://pappater.github.io/putanameto/
