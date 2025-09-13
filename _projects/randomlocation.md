@@ -1,28 +1,42 @@
+
 ---
-title: "Random Location"
+title: "Random Locations"
 date: 2025-09-13
 layout: project
-tech: "React, Redux"
+tech: "React, Google Maps API, JavaScript, CSS"
 ---
 
-**Explore Local with Exploc** — a random location generator within the given radius in kilometers.
+# Random Locations
 
-👉 Replace `loc` in the URL with your preferred km value as the radius. Example:  
-`https://exploc.surge.sh/?loc=5`
+Generate a random location within a specified radius and explore new places nearby!
 
-### 🌟 Features
+**Project URL:** [https://github.com/pappater/random-locations](https://github.com/pappater/random-locations)
 
-- Generates a random location within the given radius (in KM).
-- Easy to adjust the radius directly from the URL parameter.
-- Simple and fun way to explore random nearby spots.
+**Live Demo:** [exploc.surge.sh](https://exploc.surge.sh/?loc=5)
 
-### 🛠️ Technologies Used
+## 🚀 Features
 
-- React
-- JavaScript
-- HTML
+- Generates a random location within a user-defined radius (in kilometers)
+- Uses Google Maps to display the location visually
+- Adjustable radius via URL parameter (`?loc=5` for 5km)
+- Interactive map and markers
+- Fun way to discover new places around you
+
+## 🛠️ Technologies Used
+
+- React (Create React App)
+- Google Maps JavaScript API
+- JavaScript (ES6)
 - CSS
 
-### 🔗 Live Demo
+## Usage
 
-[exploc.surge.sh](https://exploc.surge.sh/?loc=5)
+1. Visit the live demo: [exploc.surge.sh](https://exploc.surge.sh/?loc=5)
+2. Change the `loc` parameter in the URL to set your radius in kilometers
+3. The app will show a random location within that radius on the map
+
+## Source & Documentation
+
+- Source code: [GitHub - pappater/random-locations](https://github.com/pappater/random-locations)
+
+---
