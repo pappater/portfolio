@@ -1,14 +1,12 @@
-
 ---
 title: "Random Locations"
 date: 2025-09-13
 layout: project
 tech: "React, Google Maps API, JavaScript, CSS"
 ---
+Generate a random location within a specified radius and explore new places nearby!
 
 # Random Locations
-
-Generate a random location within a specified radius and explore new places nearby!
 
 **Project URL:** [https://github.com/pappater/random-locations](https://github.com/pappater/random-locations)
 
