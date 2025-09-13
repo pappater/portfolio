@@ -1,3 +1,66 @@
+a {
+  color: #111 !important;
+  text-decoration: none;
+  font-weight: 700;
+  transition: text-decoration 0.2s;
+}
+a:hover {
+  color: #111 !important;
+  text-decoration: underline !important;
+}
+
+.project-detail {
+  max-width: 600px;
+  margin-top: 2.5rem;
+  background: #fff;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  /* padding: 2.2rem 2rem 2rem 2rem; */
+  text-align: left;
+}
+
+.project-title {
+  font-size: 2.1rem;
+  font-weight: 800;
+  color: #111;
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.project-thumb-wrap {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 1.2rem;
+}
+.project-thumb {
+  max-width: 320px;
+  max-height: 180px;
+  border-radius: 8px;
+  border: 1px solid #111;
+  background: #fafafa;
+}
+
+.project-tech {
+  font-size: 1rem;
+  color: #222;
+  margin-bottom: 1.2rem;
+  text-align: left;
+}
+
+.project-description {
+  font-size: 1.08rem;
+  color: #222;
+  line-height: 1.7;
+  margin-top: 1.2rem;
+}
+
+.site-title {
+  font-size: 2.1rem !important;
+  font-weight: 800 !important;
+  letter-spacing: -1px;
+  color: #111 !important;
+}
 /* Nav site title override */
 .site-title {
   font-size: 2.1rem !important;
