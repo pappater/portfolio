@@ -1,0 +1,20 @@
+---
+layout: default
+title:
+---
+
+<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
+<a href="https://pappater.github.io/">pappater.github.io</a>
+<div class="projects-grid">
+  {% for project in site.projects %}
+  <div class="project-tile">
+    <h2>
+      <a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
+    </h2>
+    <p>{{ project.excerpt | strip_html | truncate: 120 }}</p>
+    {% if project.demo %}
+    <a class="demo-link" href="{{ project.demo }}" target="_blank">Live Demo</a>
+    {% endif %}
+  </div>
+  {% endfor %}
+</div>
