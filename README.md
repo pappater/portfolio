@@ -3,12 +3,20 @@
 This is a Jekyll-based portfolio site with automated project synchronization from GitHub repositories. The site automatically discovers and creates portfolio entries for repositories with URLs in their About section.
 
 ## Table of Contents
+- [Quick Start](#quick-start)
 - [Project Structure](#project-structure)
 - [Installation](#installation)
 - [Running Locally](#running-locally)
 - [Configuration](#configuration)
 - [Automated Project Sync](#automated-project-sync)
 - [Deployment](#deployment)
+
+## Quick Start
+
+**New to this automation?** Start here:
+- 🚀 **[QUICK_START.md](QUICK_START.md)** - Get started in 5 minutes
+- 🔧 **[WEBHOOK_SETUP.md](WEBHOOK_SETUP.md)** - Advanced webhook configuration
+- 📖 Keep reading below for comprehensive documentation
 
 ## Project Structure
 
