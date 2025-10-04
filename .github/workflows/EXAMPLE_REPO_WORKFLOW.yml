@@ -1,0 +1,30 @@
+# Example workflow to add to your project repositories
+# This will automatically notify the portfolio when you push changes
+# 
+# To use this:
+# 1. Copy this file to your project repo: .github/workflows/notify-portfolio.yml
+# 2. Make sure your repository has a homepage URL or description set
+# 3. Push changes to trigger the workflow
+#
+# Note: This is optional - the scheduled sync will catch new repos anyway
+
+name: Notify Portfolio
+
+on:
+  push:
+    branches: [main, master]
+  release:
+    types: [published, created]
+
+jobs:
+  notify-portfolio:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Notify portfolio of updates
+        run: |
+          curl -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            https://api.github.com/repos/pappater/portfolio/dispatches \
+            -d "{\"event_type\":\"sync_new_repository\",\"client_payload\":{\"repository_name\":\"${{ github.event.repository.name }}\"}}"
+        continue-on-error: true
