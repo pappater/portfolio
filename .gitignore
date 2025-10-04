@@ -5,4 +5,5 @@ _site
 vendor
 node_modules
 package-lock.json
-package.json
+# Exclude root package.json (if any) but keep .github/scripts/package.json
+/package.json
