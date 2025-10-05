@@ -5,15 +5,15 @@ layout: project
 tech: "JavaScript"
 ---
 
-A simple, modern web app that visually displays how much of the current year has passed, updated in real time. The project also includes a backend (Node.js/Express) for scheduled social media updates, but the main focus is the static web UI.
+A modern, feature-rich web application that visually tracks the progress of time across multiple scales - year, month, week, and day. Yearify provides real-time progress visualization with advanced features like milestone tracking, custom date ranges, GitHub integration, and a beautiful dark/light theme system.
 
-- Animated progress bar showing the percentage of the year completed
+!
 
-- Displays the current date and day of the year
+- **Year Progress**: Visual progress bar showing how much of the current year has passed
 
-- Responsive, modern UI
+- **Month Progress**: Current month completion percentage
 
-- Deployable as a static site (GitHub Pages)
+- **Week Progress**: Current week advancement
 
 Source: [github.com/pappater/yearprogress](https://github.com/pappater/yearprogress)
 
