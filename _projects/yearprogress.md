@@ -17,4 +17,4 @@ A modern, feature-rich web application that visually tracks the progress of time
 
 Source: [github.com/pappater/yearprogress](https://github.com/pappater/yearprogress)
 
-Live: [https://yearinprogress.herokuapp.com/](https://yearinprogress.herokuapp.com/)
+Live: [https://pappater.github.io/yearprogress/](https://pappater.github.io/yearprogress/)
