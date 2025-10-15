@@ -31,28 +31,34 @@ github_username: pappater
 theme: minima
 plugins:
   - jekyll-feed
-# Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+
+# Exclude documentation files and other items from processing
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - README.md
+  - ARCHITECTURE.md
+  - ENHANCEMENTS.md
+  - IMPLEMENTATION_SUMMARY.md
+  - QUICK_START.md
+  - WEBHOOK_SETUP.md
+  - HOW_TO_SYNC.md
+  - .github/
+  - .git/
+  - .gitignore
+
 collections:
   projects:
     output: true
     permalink: /:name/
+    
 include:
   - assets
