@@ -1,20 +1,104 @@
 ---
 layout: default
-title:
+title: Portfolio
 ---
 
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
-<!-- <a href="https://pappater.github.io/">pappater.github.io</a> -->
-<div class="projects-grid">
-  {% for project in site.projects %}
-  <div class="project-tile">
-    <h2>
-      <a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
-    </h2>
-    <p>{{ project.excerpt | strip_html | truncate: 120 }}</p>
-    {% if project.demo %}
-    <a class="demo-link" href="{{ project.demo }}" target="_blank">Live Demo</a>
-    {% endif %}
+
+<div class="portfolio-container">
+  <header class="portfolio-header">
+    <h1 class="main-title">Projects</h1>
+    <p class="subtitle">A collection of my work</p>
+  </header>
+
+  <div class="projects-grid">
+    {% for project in site.projects %}
+    <div class="project-tile">
+      <h2>
+        <a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a>
+      </h2>
+      <p class="project-excerpt">{{ project.excerpt | strip_html | truncate: 150 }}</p>
+      {% if project.tech %}
+      <div class="project-tags">
+        <span class="tech-badge">{{ project.tech }}</span>
+      </div>
+      {% endif %}
+      {% if project.demo %}
+      <a class="demo-link" href="{{ project.demo }}" target="_blank">View Live →</a>
+      {% endif %}
+    </div>
+    {% endfor %}
   </div>
-  {% endfor %}
+
+  <footer class="portfolio-footer">
+    <p>&copy; 2025 Portfolio</p>
+    <a href="#" class="how-it-works-link" onclick="openModal(); return false;">How it Works</a>
+  </footer>
 </div>
+
+<!-- Modal -->
+<div id="howItWorksModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2>How This Portfolio Works</h2>
+    <div class="modal-body">
+      <h3>Automated Project Synchronization</h3>
+      <p>This portfolio automatically syncs with GitHub repositories using an intelligent automation system.</p>
+      
+      <h4>🔄 Automatic Discovery</h4>
+      <p>GitHub Actions workflows periodically scan repositories for new projects. Only public repositories with a URL or description are processed.</p>
+      
+      <h4>📝 Content Generation</h4>
+      <p>The system fetches each repository's README.md and uses it as the project description. If no README exists, it analyzes the repository structure to generate content and detect the technology stack.</p>
+      
+      <h4>🚀 Instant Updates</h4>
+      <p>New projects are automatically committed and deployed. Changes appear within 1-2 minutes via GitHub Pages.</p>
+      
+      <h4>⚙️ Technology Stack</h4>
+      <ul>
+        <li><strong>Jekyll</strong> - Static site generator</li>
+        <li><strong>GitHub Actions</strong> - Automated workflows</li>
+        <li><strong>GitHub API</strong> - Repository data fetching</li>
+        <li><strong>GitHub Pages</strong> - Hosting and deployment</li>
+      </ul>
+      
+      <h4>🎯 Key Features</h4>
+      <ul>
+        <li>Scheduled sync every 6 hours</li>
+        <li>Manual trigger via GitHub Actions</li>
+        <li>Webhook support for instant updates</li>
+        <li>Smart technology detection</li>
+        <li>Full README content preservation</li>
+      </ul>
+      
+      <p class="modal-footer-text">View the code on <a href="https://github.com/pappater/portfolio" target="_blank">GitHub</a></p>
+    </div>
+  </div>
+</div>
+
+<script>
+function openModal() {
+  document.getElementById('howItWorksModal').style.display = 'block';
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  document.getElementById('howItWorksModal').style.display = 'none';
+  document.body.style.overflow = 'auto';
+}
+
+// Close modal when clicking outside of it
+window.onclick = function(event) {
+  const modal = document.getElementById('howItWorksModal');
+  if (event.target == modal) {
+    closeModal();
+  }
+}
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(event) {
+  if (event.key === 'Escape') {
+    closeModal();
+  }
+});
+</script>

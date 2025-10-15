@@ -1,20 +1,29 @@
 ---
 layout: default
-title: asdf
+title: Project
 ---
 <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
 
+<div class="project-detail-container">
+  <a href="{{ site.baseurl }}/" class="back-link">← Back to Projects</a>
+  
+  <article class="project-detail">
+    <h1 class="project-title">{{ page.title }}</h1>
 
-<article class="project-detail">
-  <h1 class="project-title">{{ page.title }}</h1>
+    {% if page.tech %}
+    <p class="project-tech"><strong>Technologies:</strong> {{ page.tech }}</p>
+    {% endif %}
 
-  {% if page.thumbnail %}
-  <div class="project-thumb-wrap">
-    <img class="project-thumb" src="{{ page.thumbnail }}" alt="{{ page.title }}" />
-  </div>
-  {% endif %}
+    {% if page.thumbnail %}
+    <div class="project-thumb-wrap">
+      <img class="project-thumb" src="{{ page.thumbnail }}" alt="{{ page.title }}" />
+    </div>
+    {% endif %}
 
-  <p class="project-tech"><strong>Tech Used:</strong> {{ page.tech }}</p>
-
-  <div class="project-description">{{ content }}</div>
-</article>
+    <div class="project-description">{{ content }}</div>
+  </article>
+  
+  <footer class="project-footer">
+    <a href="{{ site.baseurl }}/" class="back-link-bottom">← Back to Projects</a>
+  </footer>
+</div>

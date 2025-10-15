@@ -221,22 +221,12 @@ tech: "${analysis.techStack}"
 
 `;
 
-  // Use AI description if available, otherwise use README or analysis
-  if (aiDescription) {
+  // Use full README content if available
+  if (readme) {
+    // Use the entire README content without truncation
+    content += readme + '\n\n';
+  } else if (aiDescription) {
     content += aiDescription + '\n\n';
-  } else if (readme) {
-    // Extract first meaningful section from README
-    const cleanReadme = readme
-      .replace(/^#.*$/gm, '') // Remove headers
-      .replace(/```[\s\S]*?```/g, '') // Remove code blocks
-      .replace(/\[.*?\]\(.*?\)/g, '') // Remove links
-      .trim()
-      .split('\n')
-      .filter(line => line.trim().length > 0)
-      .slice(0, 5)
-      .join('\n\n');
-    
-    content += cleanReadme + '\n\n';
   } else {
     content += analysis.description + '\n\n';
   }
