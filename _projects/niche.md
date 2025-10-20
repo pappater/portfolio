@@ -5,42 +5,73 @@ layout: project
 tech: "TypeScript"
 ---
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Niche: Next.js Quote Gallery
 
-## Getting Started
+Niche is a web application built with Next.js 14 and TypeScript. It displays a collection of quotes in a modern, responsive grid layout. The app uses Tailwind CSS for styling and supports light/dark theme toggling. Quotes are loaded from a JSON file and rendered as cards.
 
-First, run the development server:
+## Features
+
+- Next.js 14 App Router architecture
+- TypeScript for type safety
+- Tailwind CSS for utility-first styling
+- Responsive grid layout for quotes
+- Theme toggle (light/dark mode)
+- Quotes loaded from a static JSON file
+
+## Project Structure
+
+- `src/app/` — Main Next.js app directory (routing, layout, global styles)
+- `src/components/` — Reusable React components (quote card, grid, theme toggle)
+- `public/quotes.json` — Static data source for quotes
+- `tailwind.config.ts` — Tailwind CSS configuration
+- `.github/workflows/deploy.yml` — GitHub Actions workflow for deployment
+
+## Local Development
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deployment to GitHub Pages
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+This project is configured to deploy automatically to GitHub Pages using GitHub Actions. On every push to the `main` branch, the workflow will:
 
-## Learn More
+1. Install dependencies
+2. Build the Next.js app
+3. Export the static site to the `out` directory
+4. Deploy the contents of `out` to the `gh-pages` branch using the `peaceiris/actions-gh-pages` action
 
-To learn more about Next.js, take a look at the following resources:
+### Notes
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- The app uses `npm run export` to generate a static site. Ensure all routes and assets are compatible with static export.
+- The base path is set dynamically for GitHub Pages deployment.
+- The published site will be available at `https://<your-username>.github.io/<repository-name>/`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Customization
 
-## Deploy on Vercel
+- Add or edit quotes in `public/quotes.json`.
+- Modify components in `src/components/` for custom layouts or features.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Technologies Used
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- [Next.js](https://nextjs.org/)
+- [React](https://react.dev/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+
+## License
+
+MIT
 
 
 Source: [github.com/pappater/niche](https://github.com/pappater/niche)
