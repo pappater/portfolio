@@ -2,77 +2,91 @@
 title: "Gypsyaxiomui"
 date: 2020-04-27
 layout: project
-tech: "JavaScript"
+tech: "CSS"
 ---
 
+# Gypsy Axiom - Minimalist Quotes Application
+
+A minimalist, responsive web application that displays inspirational quotes with a clean black and white theme.
+
+![App Screenshot](https://github.com/user-attachments/assets/a93311f6-754f-4317-9d92-a6fa871d944a)
+
+## Features
+
+- **Minimalist Design**: Clean, distraction-free interface with black and white theme
+- **Quote Navigation**: Browse through quotes using arrow navigation buttons
+- **Responsive Layout**: Fully mobile-friendly and works across all device sizes
+- **Reader-Friendly**: Optimized typography for comfortable reading
+- **Configurable**: Quote source URL is configurable for easy updates
+
+## Live Demo
+
+Visit the live application at: [https://pappater.github.io/gypsyaxiomui](https://pappater.github.io/gypsyaxiomui)
+
+## Configuration
+
+The quotes URL can be configured by editing the `src/config.js` file:
+
+```javascript
+const config = {
+  quotesUrl: 'https://raw.githubusercontent.com/pappater/niche/9cfe6bd0691cfd2fe109f6a1cf597e5cf11102cf/public/quotes.json'
+};
+```
+
+## Development
+
+### Prerequisites
+
+- Node.js 16 or higher
+- npm
+
+### Installation
+
+```bash
+npm install
+```
+
+### Running Locally
+
+```bash
+npm start
+```
+
+The application will open at [http://localhost:3000/gypsyaxiomui](http://localhost:3000/gypsyaxiomui)
+
+### Building for Production
+
+```bash
+npm run build
+```
+
+For older Node versions, you may need to use:
+
+```bash
+NODE_OPTIONS=--openssl-legacy-provider npm run build
+```
+
+## Deployment
+
+The application is automatically deployed to GitHub Pages when changes are pushed to the `main` branch. The deployment workflow is configured in `.github/workflows/deploy.yml`.
+
+## Technology Stack
+
+- React 16.13.1
+- Create React App
+- GitHub Pages for hosting
+
+## UI Design
+
+- **Layout**: Centered quote display with author attribution at bottom right
+- **Navigation**: Two slim arrow buttons (← →) positioned at bottom right
+- **Theme**: Monochrome (black text on white background)
+- **Typography**: System fonts for optimal readability
+- **Responsive**: Adapts seamlessly from mobile to desktop screens
+
+## License
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
-
-In the project directory, you can run:
-
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
 
 
 Source: [github.com/pappater/gypsyaxiomui](https://github.com/pappater/gypsyaxiomui)
