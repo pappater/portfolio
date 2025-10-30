@@ -751,5 +751,3 @@ Exploring these use cases will help you get the most out of Webpack for various 
 
 
 Source: [github.com/pappater/webpack-learn](https://github.com/pappater/webpack-learn)
-
-Live: [https://lying-grass.surge.sh/](https://lying-grass.surge.sh/)
